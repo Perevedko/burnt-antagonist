@@ -14,8 +14,12 @@ def start_handler(message):
 def leha_handler(message):
     bot.send_message(message.chat.id, 'GOVNA LEPEHA')
 
+
+
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
+    # bot.reply_to(message, 'БОТ ОТКЛЮЧЁН ЗА НЕУПЛАТУ')
+    # return
     answers_dict = {
         'калий': 'литий',
         'литий': 'гелий',
@@ -23,7 +27,12 @@ def echo_all(message):
         'лёха': 'говна лепёха',
         'вышка': 'листва',
         'листочек': 'дай мефчик',
-        'сосна': 'хуй на!'
+        'сосна': 'хуй на!',
+        'бамбр': 'а не кот',
+        'пельмень': 'РРРЯЯЯЯЯ',
+        'фил': 'эх катенька.............................',
+        'маня': 'КНН!',
+        'кирито': 'не кирито, а кот'
     }
     text = message.text.lower()
     for word, answer in answers_dict.items():
